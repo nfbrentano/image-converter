@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './',
+  base: '/image-converter/',
   build: {
     outDir: 'dist',
     chunkSizeWarningLimit: 3000
