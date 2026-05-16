@@ -1,0 +1,26 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/jszip": "^3.4.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.13"
+  },
+  "dependencies": {
+    "heiccon": "^0.2.0",
+    "jszip": "^3.10.1",
+    "lucide-static": "^1.16.0",
+    "util": "^0.12.5"
+  }
+}

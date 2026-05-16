@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Converter — Client Side</title>
+    <meta name="description" content="Converta suas imagens (JPG, PNG, WebP, HEIC) diretamente no seu navegador com total privacidade." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/index-D1zVlBTN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CtDKhPoL.css">
+  </head>
+  <body class="dark-mode">
+    <div id="app">
+      <header>
+        <div class="container">
+          <div class="logo">
+            <span class="icon-camera"></span>
+            <h1>Image<span>Converter</span></h1>
+          </div>
+          <p class="subtitle">Privacidade total. Conversão 100% no seu navegador.</p>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="upload-section">
+          <div id="dropzone" class="dropzone">
+            <div class="dropzone-content">
+              <div class="upload-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              </div>
+              <h3>Arraste e solte suas imagens aqui</h3>
+              <p>ou clique para selecionar arquivos</p>
+              <span class="formats-hint">Suporta JPG, PNG, WebP, HEIC, TIFF e mais</span>
+              <input type="file" id="fileInput" multiple accept="image/*,.heic,.heif" hidden />
+            </div>
+          </div>
+        </section>
+
+        <section id="conversion-controls" class="controls-section hidden">
+          <div class="settings-grid">
+            <div class="setting-item">
+              <label for="formatSelect">Formato de Saída</label>
+              <select id="formatSelect">
+                <option value="image/jpeg">JPEG</option>
+                <option value="image/png">PNG</option>
+                <option value="image/webp">WebP</option>
+              </select>
+            </div>
+            <div class="setting-item" id="quality-setting">
+              <label for="qualitySlider">Qualidade: <span id="qualityValue">80</span>%</label>
+              <input type="range" id="qualitySlider" min="1" max="100" value="80" />
+            </div>
+            <div class="setting-item">
+              <button id="convertAllBtn" class="btn btn-primary">Converter Todas</button>
+              <button id="downloadZipBtn" class="btn btn-secondary hidden">Baixar Tudo (.zip)</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="file-list" class="file-list grid-layout">
+          <!-- Files will be injected here -->
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <p>&copy; 2026 Image Converter. Sem cookies, sem tracking, sem backend.</p>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
