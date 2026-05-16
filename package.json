@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@types/jszip": "^3.4.0",
+    "gh-pages": "^6.3.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.13"
   },
