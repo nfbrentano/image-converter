@@ -159,7 +159,7 @@ class ImageConverter {
   private getOutputFileName(fileItem: FileItem): string {
     const nameParts = fileItem.file.name.split('.')
     nameParts.pop()
-    const extension = this.formatSelect.value.split('/')[1]
+    const extension = this.formatSelect.value.split('/')[1].replace('jpeg', 'jpg')
     return `${nameParts.join('.')}.${extension}`
   }
 
