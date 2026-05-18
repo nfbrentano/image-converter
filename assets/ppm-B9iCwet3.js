@@ -1,4 +1,4 @@
-import{d as e}from"./index-C9gpBwNl.js";async function t(e,t){let r=e.width,i=e.height,a=e.getContext(`2d`);if(!a)throw Error(`Failed to get 2D context for PPM encoding`);let o=a.getImageData(0,0,r,i).data,s=`P6
+import{d as e}from"./index-BhjFcUk-.js";async function t(e,t){let r=e.width,i=e.height,a=e.getContext(`2d`);if(!a)throw Error(`Failed to get 2D context for PPM encoding`);let o=a.getImageData(0,0,r,i).data,s=`P6
 ${r} ${i}
 255
 `,c=new TextEncoder().encode(s),l=r*i,u=new Uint8Array(l*3);for(let e=0;e<l;e++)u[e*3]=o[e*4],u[e*3+1]=o[e*4+1],u[e*3+2]=o[e*4+2];return new Blob([c,u],{type:n.mime})}var n;e((()=>{n={key:`ppm`,aliases:[],label:`PPM`,mime:`image/x-portable-pixmap`,ext:`ppm`,supportsCompression:!1,compressionType:`none`,defaultQuality:null,qualityRange:null,qualityHint:`Raw pixel format — no compression`,requiresAlphaCompositing:!0,supportsTransparency:!1}}))();export{t as encode,n as meta};
